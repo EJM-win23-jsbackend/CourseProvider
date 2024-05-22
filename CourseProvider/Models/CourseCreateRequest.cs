@@ -10,7 +10,7 @@ public class CourseCreateRequest
     public string[]? Categories { get; set; }
     public string? Title { get; set; }
     public string? Ingress { get; set; }
-    public decimal StarRating { get; set; }
+    public string? StarRating { get; set; }
     public string? Reviews { get; set; }
     public string? LikesInProcent { get; set; }
     public string? Likes { get; set; }
@@ -28,8 +28,8 @@ public class AuthorCreateRequest
 public class PricesCreateRequest
 {
     public string? Currency { get; set; }
-    public decimal? Price { get; set; }
-    public decimal? Discount { get; set; }
+    public string? Price { get; set; }
+    public string? Discount { get; set; }
 }
 
 public class ContentCreateRequest
