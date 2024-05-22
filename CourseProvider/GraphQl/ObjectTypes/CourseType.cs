@@ -13,7 +13,7 @@ namespace CourseProvider.Infrastructure.GraphQL.ObjectTypes
             descriptor.Field(c => c.Categories).Type<ListType<StringType>>();
             descriptor.Field(c => c.Title).Type<StringType>();
             descriptor.Field(c => c.Ingress).Type<StringType>();
-            descriptor.Field(c => c.StarRating).Type<DecimalType>();
+            descriptor.Field(c => c.StarRating).Type<StringType>();
             descriptor.Field(c => c.Reviews).Type<StringType>();
             descriptor.Field(c => c.LikesInProcent).Type<StringType>();
             descriptor.Field(c => c.Hours).Type<StringType>();
@@ -37,8 +37,8 @@ public class PricesType : ObjectType<PricesEntity>
     protected override void Configure(IObjectTypeDescriptor<PricesEntity> descriptor)
     {
         descriptor.Field(p => p.Currency).Type<StringType>();
-        descriptor.Field(p => p.Price).Type<DecimalType>();
-        descriptor.Field(p => p.Discount).Type<DecimalType>();
+        descriptor.Field(p => p.Price).Type<StringType>();
+        descriptor.Field(p => p.Discount).Type<StringType>();
     }
 }
 
