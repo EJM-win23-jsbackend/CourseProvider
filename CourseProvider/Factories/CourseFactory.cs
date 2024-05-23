@@ -90,6 +90,7 @@ public class CourseFactory
     {
         return new Course
         {
+            Id = entity.Id, // test
             ImageUri = entity.ImageUri,
             ImageHeaderUri = entity.ImageHeaderUri,
             IsBestSeller = entity.IsBestSeller,

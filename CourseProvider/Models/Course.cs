@@ -3,7 +3,7 @@ namespace CourseProvider.Models;
 
 public class Course
 {
-    public string? Id { get; set; } = null!;
+    public string Id { get; set; } = null!;
     public string? ImageUri { get; set; }
     public string? ImageHeaderUri { get; set; }
     public bool IsBestSeller { get; set; }

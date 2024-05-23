@@ -1,10 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace CourseProvider.Data.Entities;
 
 public class CourseEntity
 {
     [Key]
+    [JsonProperty("id")] // not working either 
     public string Id { get; set; } = Guid.NewGuid().ToString();
     public string? ImageUri { get; set; }
     public string? ImageHeaderUri { get; set; }

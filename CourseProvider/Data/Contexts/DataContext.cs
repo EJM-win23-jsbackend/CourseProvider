@@ -10,7 +10,12 @@ namespace CourseProvider.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<CourseEntity>().ToContainer("Courses");
+            modelBuilder.Entity<CourseEntity>().HasKey(c => c.Id);
             modelBuilder.Entity<CourseEntity>().HasPartitionKey(c => c.Id);
+
+            modelBuilder.Entity<CourseEntity>().Property(c => c.Id)
+               .ValueGeneratedNever(); // not working
+
             modelBuilder.Entity<CourseEntity>().OwnsOne(c => c.Prices);
             modelBuilder.Entity<CourseEntity>().OwnsMany(c => c.Authors);
             modelBuilder.Entity<CourseEntity>().OwnsOne(c => c.Content, content => content.OwnsMany(c => c.ProgramDetails));
