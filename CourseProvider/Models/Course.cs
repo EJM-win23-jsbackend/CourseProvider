@@ -24,6 +24,7 @@ public class Course
 public class Author
 {
     public string? Name { get; set; }
+    public string? AuthorImage { get; set; }
 }
 
 public class Prices

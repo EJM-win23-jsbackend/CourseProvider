@@ -23,6 +23,7 @@ public class CourseCreateRequest
 public class AuthorCreateRequest
 {
     public string? Name { get; set; }
+    public string? AuthorImage { get; set; }
 }
 
 public class PricesCreateRequest

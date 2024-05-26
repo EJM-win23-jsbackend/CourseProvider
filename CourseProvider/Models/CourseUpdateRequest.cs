@@ -24,6 +24,7 @@ public class CourseUpdateRequest
 public class AuthorUpdateRequest
 {
     public string? Name { get; set; }
+    public string? AuthorImage { get; set; }
 }
 
 public class PricesUpdateRequest

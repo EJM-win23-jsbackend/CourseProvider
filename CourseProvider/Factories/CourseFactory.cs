@@ -23,7 +23,8 @@ public class CourseFactory
             Hours = request.Hours,
             Authors = request.Authors?.Select(a => new AuthorEntity
             {
-                Name = a.Name
+                Name = a.Name,
+                AuthorImage = a.AuthorImage
             }).ToList(),
             Prices = request.Prices == null ? null : new PricesEntity
             {
@@ -90,7 +91,7 @@ public class CourseFactory
     {
         return new Course
         {
-            Id = entity.Id, // test
+            Id = entity.Id, 
             ImageUri = entity.ImageUri,
             ImageHeaderUri = entity.ImageHeaderUri,
             IsBestSeller = entity.IsBestSeller,
