@@ -68,7 +68,9 @@ public class CourseFactory
             Hours = request.Hours,
             Authors = request.Authors?.Select(a => new AuthorEntity
             {
-                Name = a.Name
+                Id = a.Id,
+                Name = a.Name,
+                AuthorImage = a.AuthorImage
             }).ToList(),
             Prices = request.Prices == null ? null : new PricesEntity
             {
@@ -110,7 +112,9 @@ public class CourseFactory
             Hours = entity.Hours,
             Authors = entity.Authors?.Select(a => new Author
             {
-                Name = a.Name
+                Id = a.Id,
+                Name = a.Name,
+                AuthorImage = a.AuthorImage
             }).ToList(),
             Prices = entity.Prices == null ? null : new Prices
             {
