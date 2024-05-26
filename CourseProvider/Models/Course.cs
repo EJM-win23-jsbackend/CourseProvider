@@ -38,6 +38,7 @@ public class Prices
 public class Content 
 { 
     public string? Description { get; set; }
+    public string[]? Learning { get; set; }
     public string[]? Includes { get; set; }
     public virtual List<ProgramDetailItem>? ProgramDetails { get; set; }
 }

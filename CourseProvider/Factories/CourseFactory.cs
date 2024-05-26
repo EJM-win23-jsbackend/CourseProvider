@@ -37,6 +37,7 @@ public class CourseFactory
             {
                 Description = request.Content.Description,
                 Includes = request.Content.Includes,
+                Learning = request.Content.Learning,
                 ProgramDetails = request.Content.ProgramDetails?.Select(pd => new ProgramDetailsEntity
                 {
                     Id = pd.Id,
