@@ -23,6 +23,7 @@ public class CourseFactory
             Hours = request.Hours,
             Authors = request.Authors?.Select(a => new AuthorEntity
             {
+                Id = a.Id,
                 Name = a.Name,
                 AuthorImage = a.AuthorImage
             }).ToList(),

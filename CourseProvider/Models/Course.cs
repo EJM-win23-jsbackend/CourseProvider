@@ -23,6 +23,7 @@ public class Course
 
 public class Author
 {
+    public int Id { get; set; }
     public string? Name { get; set; }
     public string? AuthorImage { get; set; }
 }

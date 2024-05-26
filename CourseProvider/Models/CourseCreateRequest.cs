@@ -22,6 +22,7 @@ public class CourseCreateRequest
 
 public class AuthorCreateRequest
 {
+    public int Id { get; set; }
     public string? Name { get; set; }
     public string? AuthorImage { get; set; }
 }

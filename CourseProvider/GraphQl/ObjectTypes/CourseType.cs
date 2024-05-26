@@ -28,6 +28,7 @@ public class AuthorType : ObjectType<AuthorEntity>
 {
     protected override void Configure(IObjectTypeDescriptor<AuthorEntity> descriptor)
     {
+        descriptor.Field(pd => pd.Id).Type<IntType>();
         descriptor.Field(a => a.Name).Type<StringType>();
         descriptor.Field(a => a.AuthorImage).Type<StringType>();
     }
