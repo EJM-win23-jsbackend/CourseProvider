@@ -1,4 +1,5 @@
-﻿using CourseProvider.Data.Entities;
+﻿using Azure.Core;
+using CourseProvider.Data.Entities;
 using CourseProvider.Models;
 
 namespace CourseProvider.Factories;
@@ -78,6 +79,7 @@ public class CourseFactory
             Content = request.Content == null ? null : new ContentEntity
             {
                 Description = request.Content.Description,
+                Learning = request.Content.Learning,
                 Includes = request.Content.Includes,
                 ProgramDetails = request.Content.ProgramDetails?.Select(pd => new ProgramDetailsEntity
                 {
@@ -119,6 +121,7 @@ public class CourseFactory
             Content = entity.Content == null ? null : new Content
             {
                 Description = entity.Content.Description,
+                Learning = entity.Content.Learning,
                 Includes = entity.Content.Includes,
                 ProgramDetails = entity.Content.ProgramDetails?.Select(pd => new ProgramDetailItem
                 {
